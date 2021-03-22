@@ -1,0 +1,1144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1400</width>
+    <height>900</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1400</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1400</width>
+    <height>900</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: black</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="minimumSize">
+    <size>
+     <width>1400</width>
+     <height>900</height>
+    </size>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>1400</width>
+     <height>900</height>
+    </size>
+   </property>
+   <property name="layoutDirection">
+    <enum>Qt::LeftToRight</enum>
+   </property>
+   <widget class="QListWidget" name="listWidget">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>181</width>
+      <height>881</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_unit_converter">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>59</y>
+      <width>135</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>12</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white</string>
+    </property>
+    <property name="text">
+     <string>Конвертер единиц</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_calculator">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>210</y>
+      <width>131</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>15</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white</string>
+    </property>
+    <property name="text">
+     <string>Калькулятор</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="btn_ratio_converter">
+    <property name="geometry">
+     <rect>
+      <x>31</x>
+      <y>132</y>
+      <width>133</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white</string>
+    </property>
+    <property name="text">
+     <string>Конвертер соотношения</string>
+    </property>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>199</x>
+      <y>-1</y>
+      <width>1190</width>
+      <height>891</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>1</number>
+    </property>
+    <widget class="QWidget" name="instruction">
+     <widget class="QLabel" name="lbl_header">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>60</y>
+        <width>241</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Инструкция</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_text">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>160</y>
+        <width>831</width>
+        <height>661</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="unit_converter_page">
+     <widget class="QLabel" name="lbl_header_unit">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>50</y>
+        <width>251</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Единицы длины</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_equally">
+      <property name="geometry">
+       <rect>
+        <x>260</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: black; color: white;</string>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_count">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>300</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Счёт</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_length">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>230</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Сантиметр</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Дециметр</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Метр</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Километр</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_length_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>230</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Миллиметр</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Сантиметр</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Дециметр</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Метр</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_length">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>150</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_length_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>150</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_rezult">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>300</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>460</y>
+        <width>1191</width>
+        <height>5</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>610</x>
+        <y>10</y>
+        <width>5</width>
+        <height>881</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_header_mass">
+      <property name="geometry">
+       <rect>
+        <x>140</x>
+        <y>510</y>
+        <width>261</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Единицы массы</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_header_square">
+      <property name="geometry">
+       <rect>
+        <x>790</x>
+        <y>50</y>
+        <width>271</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Единицы площади</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_header_time">
+      <property name="geometry">
+       <rect>
+        <x>800</x>
+        <y>510</y>
+        <width>271</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Единицы времени</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_mass">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>600</y>
+        <width>211</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_mass_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>600</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_equally_2">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>610</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: black; color: white;</string>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_mass">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>690</y>
+        <width>211</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Килограмм</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Грамм</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Центнер</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Тонна</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_mass_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>690</y>
+        <width>231</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Килограмм</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Грамм</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Центнер</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btn_count_2">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>770</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Счёт</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_rezult_2">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>770</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="btn_count_3">
+      <property name="geometry">
+       <rect>
+        <x>690</x>
+        <y>300</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Счёт</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_rezult_3">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>300</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_equally_3">
+      <property name="geometry">
+       <rect>
+        <x>900</x>
+        <y>150</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: black; color: white;</string>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_square">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>150</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_square_2">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>150</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_square">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>230</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Сантиметр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Дециметр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Метр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Километр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ар</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Гектар</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_square_2">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>230</y>
+        <width>241</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Миллиметр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Сантиметр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Дециметр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Метр2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Ар</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Гектар</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_time">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>600</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_time_2">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>600</y>
+        <width>241</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_equally_4">
+      <property name="geometry">
+       <rect>
+        <x>890</x>
+        <y>610</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>40</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: black; color: white;</string>
+      </property>
+      <property name="text">
+       <string>=</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_time">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>690</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Минута</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Час</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Сутки</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Год</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Век</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_time_2">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>690</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <item>
+       <property name="text">
+        <string>Секунда</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Минута</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Час</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Месяц</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>Лет</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QPushButton" name="btn_count_4">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>770</y>
+        <width>171</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>25</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Счёт</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_rezult_4">
+      <property name="geometry">
+       <rect>
+        <x>950</x>
+        <y>760</y>
+        <width>221</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="ratio_converter_page">
+     <widget class="QLabel" name="lbl_header_ratio">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>40</y>
+        <width>521</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
+      <property name="text">
+       <string>Конвертер соотношения единиц измерения</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="calculator_page">
+     <widget class="QLabel" name="lbl_header_calculator">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>40</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:white</string>
+      </property>
+      <property name="text">
+       <string>Калькулятор</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
