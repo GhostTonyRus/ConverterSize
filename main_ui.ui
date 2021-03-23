@@ -130,13 +130,13 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="instruction">
      <widget class="QLabel" name="lbl_header">
       <property name="geometry">
        <rect>
-        <x>370</x>
+        <x>470</x>
         <y>60</y>
         <width>241</width>
         <height>61</height>
@@ -164,14 +164,31 @@
      <widget class="QLabel" name="lbl_text">
       <property name="geometry">
        <rect>
-        <x>80</x>
-        <y>160</y>
+        <x>180</x>
+        <y>170</y>
         <width>831</width>
         <height>661</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: white</string>
+      </property>
       <property name="text">
-       <string>TextLabel</string>
+       <string>Слева колонка с кнопками. Каждая кнопка - это отдельная страница с конвертором единиц. Для перехода на нужный конвертер нужно всего лишь нажать на кнопку. В конвертере единиц есть четыре варианта перевода: длина, площадь, массы, время.Например, смотрим на окно единицы длины:
+в левое поле заносим число и выбираем переводимую единицу, в правое поле вводим переводимое число и единицу для перевода, нажимаем счёт.
+В конвертере давления выбираем нужно значение, вводим число и нажимаем счёт.</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
       </property>
      </widget>
     </widget>
@@ -1691,6 +1708,28 @@
       </property>
      </widget>
     </widget>
+   </widget>
+   <widget class="QPushButton" name="btn_instruction">
+    <property name="geometry">
+     <rect>
+      <x>50</x>
+      <y>770</y>
+      <width>111</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Times New Roman</family>
+      <pointsize>14</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: white</string>
+    </property>
+    <property name="text">
+     <string>Инструкция</string>
+    </property>
    </widget>
   </widget>
  </widget>
