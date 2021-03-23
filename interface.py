@@ -47,6 +47,9 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
                                                                  number_1=self.ui.le_units_of_time.text(),
                                                                  number_2=self.ui.le_units_of_time_2.text()))
 
+        # счёт единц давления
+        self.ui.btn_count_5.clicked.connect(lambda: self.getPressure(value=self.ui.cb_units_of_pressures.currentText()))
+
     # настройка показа окон
     # конвертер единиц
     def showUnitPage(self):
@@ -61,7 +64,3 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         self.ui.stackedWidget.setCurrentWidget(self.ui.calculator_page)
 
 
-app = QtWidgets.QApplication(sys.argv)
-application = MyWindow()
-application.show()
-sys.exit(app.exec_())
