@@ -14,16 +14,21 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # self.calc = Calculator()
-
+        # прказ окна инструкции по умолчанию
         self.ui.stackedWidget.setCurrentWidget(self.ui.instruction)
 
         # настройка кнопок
         # показ конвертора единиц
         self.ui.btn_unit_converter.clicked.connect(self.showUnitPage)
+        # показ давления
         self.ui.btn_ratio_converter.clicked.connect(self.showRatioPage)
+        # показ калькулятор
         self.ui.btn_calculator.clicked.connect(self.showCalculatorPage)
+        # показ инструкции
         self.ui.btn_instruction.clicked.connect(self.showInstruction)
+        # показ конвертер 2
+        self.ui.btn_converter_2.clicked.connect(self.showConverter)
+
         # счёт единиц длины
         self.ui.btn_count.clicked.connect(lambda: self.getLength(value_1=self.ui.cb_units_of_length.currentText(), # единица из которой переводят
                                                                  value_2=self.ui.cb_units_of_length_2.currentText(), # единица в которую переводят
@@ -51,6 +56,23 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         # счёт единиц давления
         self.ui.btn_count_5.clicked.connect(lambda: self.getPressure(value=self.ui.cb_units_of_pressures.currentText()))
 
+        # перевод единиц длины
+        self.ui.btn_conversion_1.clicked.connect(lambda: self.conversionLength(number=self.ui.le_units_of_length_3.text(),
+                                                                               value_1=self.ui.cb_units_of_length_3.currentText(),
+                                                                               value_2=self.ui.cb_units_of_length_4.currentText()))
+        # перевод единиц площпди
+        self.ui.btn_conversion_2.clicked.connect(lambda: self.conversionSquare(number=self.ui.le_units_of_square_3.text(),
+                                                                              value_1=self.ui.cb_units_of_square_3.currentText(),
+                                                                              value_2=self.ui.cb_units_of_square_4.currentText()))
+        # перевод единиц массы
+        self.ui.btn_conversion_3.clicked.connect(lambda: self.conversionMass(number=self.ui.le_units_of_mass_3.text(),
+                                                                            value_1=self.ui.cb_units_of_mass_3.currentText(),
+                                                                            value_2=self.ui.cb_units_of_mass_4.currentText()))
+        # перевод единиц времени
+        self.ui.btn_conversion_4.clicked.connect(lambda: self.conversionTime(number=self.ui.le_units_of_time_3.text(),
+                                                                            value_1=self.ui.cb_units_of_time_3.currentText(),
+                                                                            value_2=self.ui.cb_units_of_time_4.currentText()))
+
     # настройка показа окон
     # страница конвертера единиц
     def showUnitPage(self):
@@ -67,4 +89,8 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
     # страница инструкции
     def showInstruction(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.instruction)
+
+    # страница конвертора 2
+    def showConverter(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.unit_converter_page_2)
 
