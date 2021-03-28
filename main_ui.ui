@@ -26,7 +26,7 @@
    <string>MainWindow</string>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: black</string>
+   <string notr="true">background-color: #222831;</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="minimumSize">
@@ -57,10 +57,10 @@
    <widget class="QPushButton" name="btn_unit_converter">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>20</x>
       <y>59</y>
-      <width>135</width>
-      <height>51</height>
+      <width>150</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="font">
@@ -70,7 +70,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: white</string>
+     <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
     </property>
     <property name="text">
      <string>Конвертер единиц</string>
@@ -79,10 +80,10 @@
    <widget class="QPushButton" name="btn_calculator">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>210</y>
-      <width>131</width>
-      <height>51</height>
+      <width>150</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="font">
@@ -92,7 +93,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: white</string>
+     <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
     </property>
     <property name="text">
      <string>Калькулятор</string>
@@ -101,10 +103,10 @@
    <widget class="QPushButton" name="btn_ratio_converter">
     <property name="geometry">
      <rect>
-      <x>31</x>
+      <x>20</x>
       <y>132</y>
-      <width>133</width>
-      <height>51</height>
+      <width>150</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="font">
@@ -114,7 +116,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: white</string>
+     <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
     </property>
     <property name="text">
      <string>Конвертер давления</string>
@@ -124,9 +127,9 @@
     <property name="geometry">
      <rect>
       <x>199</x>
-      <y>-1</y>
-      <width>1190</width>
-      <height>891</height>
+      <y>-20</y>
+      <width>1201</width>
+      <height>911</height>
      </rect>
     </property>
     <property name="font">
@@ -135,15 +138,18 @@
       <bold>true</bold>
      </font>
     </property>
+    <property name="styleSheet">
+     <string notr="true">background-color: #222831;</string>
+    </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>4</number>
     </property>
     <widget class="QWidget" name="instruction">
      <widget class="QLabel" name="lbl_header">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>60</y>
+        <x>460</x>
+        <y>130</y>
         <width>241</width>
         <height>61</height>
        </rect>
@@ -158,7 +164,8 @@
        <enum>Qt::RightToLeft</enum>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #222831;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Инструкция</string>
@@ -171,9 +178,9 @@
       <property name="geometry">
        <rect>
         <x>180</x>
-        <y>170</y>
+        <y>350</y>
         <width>831</width>
-        <height>661</height>
+        <height>151</height>
        </rect>
       </property>
       <property name="font">
@@ -183,12 +190,12 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #222831;
+color: #ffd369;</string>
       </property>
       <property name="text">
-       <string>Слева колонка с кнопками. Каждая кнопка - это отдельная страница с конвертором единиц. Для перехода на нужный конвертер нужно всего лишь нажать на кнопку. В конвертере единиц есть четыре варианта перевода: длина, площадь, массы, время.Например, смотрим на окно единицы длины:
-в левое поле заносим число и выбираем переводимую единицу, в правое поле вводим переводимое число и единицу для перевода, нажимаем счёт.
-В конвертере давления выбираем нужно значение, вводим число и нажимаем счёт.</string>
+       <string>Программа выполняет четыре функции: конвертирует из одной единицы в другую, конвертирует давление, выполняет простой счёт в калькуляторе, конверирует единицу. Поля ввода ьвыделены белой рамкой. Для перевода необходимо нажать кнопку перевод.
+</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -202,14 +209,14 @@
      <widget class="Line" name="line_3">
       <property name="geometry">
        <rect>
-        <x>580</x>
-        <y>30</y>
+        <x>600</x>
+        <y>20</y>
         <width>5</width>
-        <height>851</height>
+        <height>910</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
+       <string notr="true">background-color: #ffd369;</string>
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -219,13 +226,13 @@
       <property name="geometry">
        <rect>
         <x>0</x>
-        <y>440</y>
+        <y>460</y>
         <width>1191</width>
         <height>5</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #ffd369;</string>
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -234,8 +241,8 @@
      <widget class="QPushButton" name="btn_conversion_1">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>300</y>
+        <x>190</x>
+        <y>350</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -247,7 +254,9 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Перевод</string>
@@ -256,8 +265,8 @@
      <widget class="QPushButton" name="btn_conversion_2">
       <property name="geometry">
        <rect>
-        <x>800</x>
-        <y>300</y>
+        <x>810</x>
+        <y>340</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -269,7 +278,9 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Перевод</string>
@@ -278,8 +289,8 @@
      <widget class="QPushButton" name="btn_conversion_3">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>780</y>
+        <x>190</x>
+        <y>800</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -291,7 +302,9 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Перевод</string>
@@ -300,8 +313,8 @@
      <widget class="QPushButton" name="btn_conversion_4">
       <property name="geometry">
        <rect>
-        <x>810</x>
-        <y>790</y>
+        <x>820</x>
+        <y>800</y>
         <width>191</width>
         <height>41</height>
        </rect>
@@ -313,39 +326,19 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Перевод</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_units_of_length_3">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>140</y>
-        <width>241</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="layoutDirection">
-       <enum>Qt::RightToLeft</enum>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="le_units_of_square_3">
       <property name="geometry">
        <rect>
         <x>630</x>
-        <y>140</y>
+        <y>180</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -357,52 +350,26 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="le_units_of_mass_3">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>610</y>
-        <width>221</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_units_of_time_3">
-      <property name="geometry">
-       <rect>
-        <x>620</x>
-        <y>610</y>
-        <width>231</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white</string>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb_units_of_length_3">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>220</y>
+        <x>10</x>
+        <y>630</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -414,7 +381,70 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_time_3">
+      <property name="geometry">
+       <rect>
+        <x>630</x>
+        <y>630</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_length_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>260</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -441,7 +471,7 @@
       <property name="geometry">
        <rect>
         <x>330</x>
-        <y>220</y>
+        <y>260</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -453,7 +483,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -480,7 +511,7 @@
       <property name="geometry">
        <rect>
         <x>630</x>
-        <y>220</y>
+        <y>260</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -492,7 +523,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -528,8 +560,8 @@
      <widget class="QComboBox" name="cb_units_of_square_4">
       <property name="geometry">
        <rect>
-        <x>930</x>
-        <y>220</y>
+        <x>940</x>
+        <y>260</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -541,7 +573,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -577,9 +610,9 @@
      <widget class="QComboBox" name="cb_units_of_mass_3">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>700</y>
-        <width>221</width>
+        <x>10</x>
+        <y>710</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -590,7 +623,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -616,8 +650,8 @@
      <widget class="QComboBox" name="cb_units_of_mass_4">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>700</y>
+        <x>330</x>
+        <y>710</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -629,7 +663,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -650,8 +685,8 @@
      <widget class="QComboBox" name="cb_units_of_time_3">
       <property name="geometry">
        <rect>
-        <x>620</x>
-        <y>700</y>
+        <x>630</x>
+        <y>710</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -663,7 +698,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -694,8 +730,8 @@
      <widget class="QComboBox" name="cb_units_of_time_4">
       <property name="geometry">
        <rect>
-        <x>920</x>
-        <y>700</y>
+        <x>940</x>
+        <y>710</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -707,7 +743,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -735,37 +772,13 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="equally">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>142</y>
-        <width>47</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>25</pointsize>
-        <weight>75</weight>
-        <bold>true</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
-      </property>
-      <property name="text">
-       <string>=&gt;</string>
-      </property>
-     </widget>
      <widget class="QLabel" name="equally_2">
       <property name="geometry">
        <rect>
-        <x>880</x>
-        <y>140</y>
-        <width>47</width>
-        <height>31</height>
+        <x>890</x>
+        <y>180</y>
+        <width>40</width>
+        <height>40</height>
        </rect>
       </property>
       <property name="font">
@@ -777,7 +790,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
+       <string notr="true">background-color:#222831;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>=&gt;</string>
@@ -787,9 +801,9 @@
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>610</y>
-        <width>47</width>
-        <height>31</height>
+        <y>640</y>
+        <width>50</width>
+        <height>40</height>
        </rect>
       </property>
       <property name="font">
@@ -801,7 +815,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
+       <string notr="true">background-color:#222831;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>=&gt;</string>
@@ -810,10 +825,10 @@
      <widget class="QLabel" name="equally_4">
       <property name="geometry">
        <rect>
-        <x>870</x>
-        <y>610</y>
-        <width>47</width>
-        <height>31</height>
+        <x>890</x>
+        <y>630</y>
+        <width>40</width>
+        <height>40</height>
        </rect>
       </property>
       <property name="font">
@@ -825,39 +840,18 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
+       <string notr="true">background-color:#222831;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>=&gt;</string>
       </property>
      </widget>
-     <widget class="QLabel" name="lbl_rezult_conversion">
-      <property name="geometry">
-       <rect>
-        <x>330</x>
-        <y>140</y>
-        <width>231</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QLabel" name="lbl_rezult_conversion_2">
       <property name="geometry">
        <rect>
-        <x>930</x>
-        <y>140</y>
+        <x>940</x>
+        <y>180</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -869,7 +863,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -878,30 +873,8 @@
      <widget class="QLabel" name="lbl_rezult_conversion_3">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>610</y>
-        <width>231</width>
-        <height>41</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
-     <widget class="QLabel" name="lbl_rezult_conversion_4">
-      <property name="geometry">
-       <rect>
-        <x>920</x>
-        <y>610</y>
+        <x>330</x>
+        <y>630</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -913,7 +886,217 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white;</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_rezult_conversion_4">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>630</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_header_unit_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>90</y>
+        <width>270</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>Единицы длины</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_header_square_2">
+      <property name="geometry">
+       <rect>
+        <x>770</x>
+        <y>90</y>
+        <width>270</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>Единицы площади</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_header_mass_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>540</y>
+        <width>270</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>Единицы массы</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_header_time_2">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>540</y>
+        <width>271</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>Единицы времени</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="equally">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>180</y>
+        <width>50</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>25</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #222831;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>=&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_length_3">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>180</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::RightToLeft</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_rezult_conversion">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>180</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -925,9 +1108,9 @@
       <property name="geometry">
        <rect>
         <x>150</x>
-        <y>50</y>
-        <width>251</width>
-        <height>50</height>
+        <y>100</y>
+        <width>270</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -937,7 +1120,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Единицы длины</string>
@@ -949,22 +1133,24 @@
      <widget class="QLabel" name="lbl_equally">
       <property name="geometry">
        <rect>
-        <x>260</x>
-        <y>150</y>
-        <width>41</width>
-        <height>31</height>
+        <x>270</x>
+        <y>190</y>
+        <width>51</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>40</pointsize>
+        <family>Times New Roman</family>
+        <pointsize>30</pointsize>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
+       <string notr="true">background-color: #222831;
+color: #ffd369;</string>
       </property>
       <property name="text">
-       <string>=</string>
+       <string>=&gt;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -973,8 +1159,8 @@
      <widget class="QPushButton" name="btn_count">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>300</y>
+        <x>10</x>
+        <y>330</y>
         <width>171</width>
         <height>41</height>
        </rect>
@@ -986,7 +1172,9 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Счёт</string>
@@ -996,9 +1184,9 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>230</y>
+        <y>260</y>
         <width>241</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -1008,7 +1196,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1034,10 +1223,10 @@
      <widget class="QComboBox" name="cb_units_of_length_2">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>230</y>
+        <x>340</x>
+        <y>260</y>
         <width>241</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -1047,7 +1236,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1074,7 +1264,7 @@
       <property name="geometry">
        <rect>
         <x>10</x>
-        <y>150</y>
+        <y>190</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -1086,14 +1276,26 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="le_units_of_length_2">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>150</y>
+        <x>340</x>
+        <y>190</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -1105,15 +1307,27 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
       </property>
      </widget>
      <widget class="QLabel" name="lbl_rezult">
       <property name="geometry">
        <rect>
-        <x>320</x>
-        <y>300</y>
-        <width>221</width>
+        <x>340</x>
+        <y>330</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -1124,7 +1338,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -1143,7 +1358,7 @@
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #ffd369;</string>
       </property>
       <property name="orientation">
        <enum>Qt::Horizontal</enum>
@@ -1152,14 +1367,14 @@
      <widget class="Line" name="line_2">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>600</x>
         <y>10</y>
         <width>5</width>
-        <height>881</height>
+        <height>930</height>
        </rect>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #ffd369;</string>
       </property>
       <property name="orientation">
        <enum>Qt::Vertical</enum>
@@ -1168,10 +1383,10 @@
      <widget class="QLabel" name="lbl_header_mass">
       <property name="geometry">
        <rect>
-        <x>140</x>
-        <y>510</y>
-        <width>261</width>
-        <height>51</height>
+        <x>150</x>
+        <y>550</y>
+        <width>270</width>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -1181,7 +1396,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Единицы массы</string>
@@ -1193,9 +1409,9 @@
      <widget class="QLabel" name="lbl_header_square">
       <property name="geometry">
        <rect>
-        <x>790</x>
-        <y>50</y>
-        <width>271</width>
+        <x>770</x>
+        <y>100</y>
+        <width>270</width>
         <height>41</height>
        </rect>
       </property>
@@ -1206,7 +1422,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Единицы площади</string>
@@ -1218,10 +1435,10 @@
      <widget class="QLabel" name="lbl_header_time">
       <property name="geometry">
        <rect>
-        <x>800</x>
-        <y>510</y>
+        <x>770</x>
+        <y>550</y>
         <width>271</width>
-        <height>51</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -1231,7 +1448,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Единицы времени</string>
@@ -1243,71 +1461,9 @@
      <widget class="QLineEdit" name="le_units_of_mass">
       <property name="geometry">
        <rect>
-        <x>20</x>
-        <y>600</y>
-        <width>211</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_units_of_mass_2">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>600</y>
+        <x>10</x>
+        <y>640</y>
         <width>241</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="lbl_equally_2">
-      <property name="geometry">
-       <rect>
-        <x>250</x>
-        <y>610</y>
-        <width>41</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>40</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
-      </property>
-      <property name="text">
-       <string>=</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb_units_of_mass">
-      <property name="geometry">
-       <rect>
-        <x>20</x>
-        <y>690</y>
-        <width>211</width>
         <height>41</height>
        </rect>
       </property>
@@ -1318,7 +1474,96 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_mass_2">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>640</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_equally_2">
+      <property name="geometry">
+       <rect>
+        <x>270</x>
+        <y>640</y>
+        <width>51</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #222831;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>=&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_mass">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>710</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1344,9 +1589,9 @@
      <widget class="QComboBox" name="cb_units_of_mass_2">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>690</y>
-        <width>231</width>
+        <x>340</x>
+        <y>710</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -1357,7 +1602,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1378,8 +1624,8 @@
      <widget class="QPushButton" name="btn_count_2">
       <property name="geometry">
        <rect>
-        <x>40</x>
-        <y>770</y>
+        <x>10</x>
+        <y>780</y>
         <width>171</width>
         <height>41</height>
        </rect>
@@ -1391,7 +1637,9 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Счёт</string>
@@ -1400,9 +1648,9 @@
      <widget class="QLabel" name="lbl_rezult_2">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>770</y>
-        <width>221</width>
+        <x>340</x>
+        <y>780</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -1413,7 +1661,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -1425,8 +1674,8 @@
      <widget class="QPushButton" name="btn_count_3">
       <property name="geometry">
        <rect>
-        <x>690</x>
-        <y>300</y>
+        <x>630</x>
+        <y>330</y>
         <width>171</width>
         <height>41</height>
        </rect>
@@ -1438,7 +1687,9 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Счёт</string>
@@ -1448,8 +1699,8 @@
       <property name="geometry">
        <rect>
         <x>940</x>
-        <y>300</y>
-        <width>221</width>
+        <y>330</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -1460,7 +1711,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -1472,22 +1724,24 @@
      <widget class="QLabel" name="lbl_equally_3">
       <property name="geometry">
        <rect>
-        <x>900</x>
-        <y>150</y>
+        <x>880</x>
+        <y>190</y>
         <width>41</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
        <font>
-        <pointsize>40</pointsize>
+        <family>Times New Roman</family>
+        <pointsize>30</pointsize>
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
+       <string notr="true">background-color: #222831;
+color: #ffd369;</string>
       </property>
       <property name="text">
-       <string>=</string>
+       <string>=&gt;</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignCenter</set>
@@ -1496,8 +1750,8 @@
      <widget class="QLineEdit" name="le_units_of_square">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>150</y>
+        <x>620</x>
+        <y>190</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -1509,14 +1763,26 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
       </property>
      </widget>
      <widget class="QLineEdit" name="le_units_of_square_2">
       <property name="geometry">
        <rect>
-        <x>950</x>
-        <y>150</y>
+        <x>940</x>
+        <y>190</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -1528,16 +1794,28 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
       </property>
      </widget>
      <widget class="QComboBox" name="cb_units_of_square">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>230</y>
+        <x>630</x>
+        <y>260</y>
         <width>241</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -1547,7 +1825,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1583,10 +1862,10 @@
      <widget class="QComboBox" name="cb_units_of_square_2">
       <property name="geometry">
        <rect>
-        <x>950</x>
-        <y>230</y>
+        <x>940</x>
+        <y>260</y>
         <width>241</width>
-        <height>31</height>
+        <height>41</height>
        </rect>
       </property>
       <property name="font">
@@ -1596,7 +1875,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1632,70 +1912,8 @@
      <widget class="QLineEdit" name="le_units_of_time">
       <property name="geometry">
        <rect>
-        <x>630</x>
-        <y>600</y>
-        <width>241</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white</string>
-      </property>
-     </widget>
-     <widget class="QLineEdit" name="le_units_of_time_2">
-      <property name="geometry">
-       <rect>
-        <x>950</x>
-        <y>600</y>
-        <width>241</width>
-        <height>51</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>Times New Roman</family>
-        <pointsize>20</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: white</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="lbl_equally_4">
-      <property name="geometry">
-       <rect>
-        <x>890</x>
-        <y>610</y>
-        <width>41</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>40</pointsize>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: black; color: white;</string>
-      </property>
-      <property name="text">
-       <string>=</string>
-      </property>
-      <property name="alignment">
-       <set>Qt::AlignCenter</set>
-      </property>
-     </widget>
-     <widget class="QComboBox" name="cb_units_of_time">
-      <property name="geometry">
-       <rect>
-        <x>630</x>
-        <y>690</y>
+        <x>620</x>
+        <y>640</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -1707,7 +1925,96 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="le_units_of_time_2">
+      <property name="geometry">
+       <rect>
+        <x>940</x>
+        <y>640</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="lbl_equally_4">
+      <property name="geometry">
+       <rect>
+        <x>880</x>
+        <y>640</y>
+        <width>41</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #222831;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>=&gt;</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="cb_units_of_time">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>710</y>
+        <width>241</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1738,8 +2045,8 @@
      <widget class="QComboBox" name="cb_units_of_time_2">
       <property name="geometry">
        <rect>
-        <x>950</x>
-        <y>690</y>
+        <x>940</x>
+        <y>710</y>
         <width>241</width>
         <height>41</height>
        </rect>
@@ -1751,7 +2058,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -1782,8 +2090,8 @@
      <widget class="QPushButton" name="btn_count_4">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>770</y>
+        <x>620</x>
+        <y>780</y>
         <width>171</width>
         <height>41</height>
        </rect>
@@ -1795,7 +2103,9 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;
+border-radius: 10px</string>
       </property>
       <property name="text">
        <string>Счёт</string>
@@ -1804,9 +2114,9 @@
      <widget class="QLabel" name="lbl_rezult_4">
       <property name="geometry">
        <rect>
-        <x>950</x>
-        <y>760</y>
-        <width>221</width>
+        <x>940</x>
+        <y>780</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -1817,7 +2127,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -1832,7 +2143,7 @@
       <property name="geometry">
        <rect>
         <x>210</x>
-        <y>20</y>
+        <y>70</y>
         <width>741</width>
         <height>61</height>
        </rect>
@@ -1844,7 +2155,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Конвертер соотношения единиц измерения давления.</string>
@@ -1856,9 +2168,9 @@
      <widget class="QLabel" name="lbl_pa">
       <property name="geometry">
        <rect>
-        <x>50</x>
+        <x>60</x>
         <y>450</y>
-        <width>91</width>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -1869,7 +2181,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Па</string>
@@ -1881,9 +2194,9 @@
      <widget class="QLabel" name="lbl_kpa">
       <property name="geometry">
        <rect>
-        <x>310</x>
+        <x>300</x>
         <y>450</y>
-        <width>91</width>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -1894,7 +2207,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>кПа</string>
@@ -1906,9 +2220,9 @@
      <widget class="QLabel" name="lbl_mpa">
       <property name="geometry">
        <rect>
-        <x>540</x>
+        <x>530</x>
         <y>450</y>
-        <width>91</width>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -1919,7 +2233,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>МПа</string>
@@ -1933,7 +2248,7 @@
        <rect>
         <x>760</x>
         <y>450</y>
-        <width>91</width>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -1944,7 +2259,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>кГс/см2</string>
@@ -1956,9 +2272,9 @@
      <widget class="QLabel" name="lbl_fiz">
       <property name="geometry">
        <rect>
-        <x>990</x>
+        <x>980</x>
         <y>450</y>
-        <width>91</width>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -1969,7 +2285,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>физ.атм</string>
@@ -1981,9 +2298,9 @@
      <widget class="QLabel" name="lbl_mmrtst">
       <property name="geometry">
        <rect>
-        <x>50</x>
-        <y>710</y>
-        <width>91</width>
+        <x>180</x>
+        <y>660</y>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -1994,7 +2311,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>мм.рт.ст</string>
@@ -2006,9 +2324,9 @@
      <widget class="QLabel" name="lbl_mmvodst">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>710</y>
-        <width>91</width>
+        <x>400</x>
+        <y>660</y>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -2019,7 +2337,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>мм.вод.ст</string>
@@ -2031,9 +2350,9 @@
      <widget class="QLabel" name="lbl_bar">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>710</y>
-        <width>91</width>
+        <x>630</x>
+        <y>660</y>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -2044,7 +2363,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>bar</string>
@@ -2056,9 +2376,9 @@
      <widget class="QLabel" name="lbl_psi">
       <property name="geometry">
        <rect>
-        <x>660</x>
-        <y>710</y>
-        <width>91</width>
+        <x>860</x>
+        <y>660</y>
+        <width>150</width>
         <height>51</height>
        </rect>
       </property>
@@ -2069,7 +2389,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>psi</string>
@@ -2082,8 +2403,8 @@
       <property name="geometry">
        <rect>
         <x>430</x>
-        <y>160</y>
-        <width>201</width>
+        <y>170</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -2094,7 +2415,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <item>
        <property name="text">
@@ -2145,9 +2467,9 @@
      <widget class="QPushButton" name="btn_count_5">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>310</y>
-        <width>171</width>
+        <x>430</x>
+        <y>320</y>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -2158,17 +2480,18 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
-       <string>Счёт</string>
+       <string>Перевод</string>
       </property>
      </widget>
      <widget class="QLabel" name="lbl_rez_1">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>540</y>
+        <x>60</x>
+        <y>530</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2180,7 +2503,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2192,8 +2516,8 @@
      <widget class="QLabel" name="lbl_rez_2">
       <property name="geometry">
        <rect>
-        <x>280</x>
-        <y>540</y>
+        <x>300</x>
+        <y>530</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2205,7 +2529,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2217,8 +2542,8 @@
      <widget class="QLabel" name="lbl_rez_3">
       <property name="geometry">
        <rect>
-        <x>510</x>
-        <y>540</y>
+        <x>530</x>
+        <y>530</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2230,7 +2555,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2242,8 +2568,8 @@
      <widget class="QLabel" name="lbl_rez_4">
       <property name="geometry">
        <rect>
-        <x>740</x>
-        <y>540</y>
+        <x>760</x>
+        <y>530</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2255,7 +2581,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2267,8 +2594,8 @@
      <widget class="QLabel" name="lbl_rez_5">
       <property name="geometry">
        <rect>
-        <x>970</x>
-        <y>540</y>
+        <x>980</x>
+        <y>530</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2280,7 +2607,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2292,8 +2620,8 @@
      <widget class="QLabel" name="lbl_rez_6">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>800</y>
+        <x>180</x>
+        <y>740</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2305,7 +2633,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2317,8 +2646,8 @@
      <widget class="QLabel" name="lbl_rez_7">
       <property name="geometry">
        <rect>
-        <x>240</x>
-        <y>800</y>
+        <x>400</x>
+        <y>740</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2330,7 +2659,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2342,8 +2672,8 @@
      <widget class="QLabel" name="lbl_rez_8">
       <property name="geometry">
        <rect>
-        <x>450</x>
-        <y>800</y>
+        <x>630</x>
+        <y>740</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2355,7 +2685,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2367,8 +2698,8 @@
      <widget class="QLabel" name="lbl_rez_9">
       <property name="geometry">
        <rect>
-        <x>650</x>
-        <y>800</y>
+        <x>860</x>
+        <y>740</y>
         <width>150</width>
         <height>41</height>
        </rect>
@@ -2380,7 +2711,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string/>
@@ -2394,7 +2726,7 @@
        <rect>
         <x>430</x>
         <y>240</y>
-        <width>211</width>
+        <width>241</width>
         <height>41</height>
        </rect>
       </property>
@@ -2405,7 +2737,19 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color: white</string>
+       <string notr="true">QLineEdit {
+        border-width: 3px;
+        border-style: solid;
+        border-color: #ffd369;	
+        background-color: #393e46;
+	    color: #ffd369;
+ }
+
+
+QLineEdit:focus {
+        border-color: rgb(255, 156, 0);
+ }
+</string>
       </property>
      </widget>
     </widget>
@@ -2413,8 +2757,8 @@
      <widget class="QLabel" name="lbl_header_calculator">
       <property name="geometry">
        <rect>
-        <x>360</x>
-        <y>40</y>
+        <x>430</x>
+        <y>100</y>
         <width>261</width>
         <height>71</height>
        </rect>
@@ -2426,7 +2770,8 @@
        </font>
       </property>
       <property name="styleSheet">
-       <string notr="true">background-color:white</string>
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
       </property>
       <property name="text">
        <string>Калькулятор</string>
@@ -2435,15 +2780,468 @@
        <set>Qt::AlignCenter</set>
       </property>
      </widget>
+     <widget class="QFrame" name="fr_calc">
+      <property name="geometry">
+       <rect>
+        <x>80</x>
+        <y>240</y>
+        <width>331</width>
+        <height>561</height>
+       </rect>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <widget class="QPushButton" name="pushButton">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>180</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </widget>
+      <widget class="QLabel" name="label">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>20</y>
+         <width>311</width>
+         <height>80</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>40</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_2">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>180</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_3">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>180</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_4">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>180</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>+</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_5">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>270</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_6">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>270</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_7">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>270</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_8">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>270</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>-</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_9">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>360</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_10">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>360</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_11">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>360</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_12">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>360</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>/</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_13">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>450</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>C</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_14">
+       <property name="geometry">
+        <rect>
+         <x>90</x>
+         <y>450</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>0</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_15">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>450</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>.</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_16">
+       <property name="geometry">
+        <rect>
+         <x>250</x>
+         <y>450</y>
+         <width>75</width>
+         <height>75</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>*</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_17">
+       <property name="geometry">
+        <rect>
+         <x>10</x>
+         <y>120</y>
+         <width>154</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>**</string>
+       </property>
+      </widget>
+      <widget class="QPushButton" name="pushButton_18">
+       <property name="geometry">
+        <rect>
+         <x>170</x>
+         <y>120</y>
+         <width>154</width>
+         <height>41</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <family>Times New Roman</family>
+         <pointsize>30</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+       </property>
+       <property name="text">
+        <string>=</string>
+       </property>
+      </widget>
+     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="btn_instruction">
     <property name="geometry">
      <rect>
-      <x>50</x>
-      <y>770</y>
-      <width>111</width>
-      <height>41</height>
+      <x>20</x>
+      <y>800</y>
+      <width>150</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="font">
@@ -2453,7 +3251,8 @@
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: white</string>
+     <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
     </property>
     <property name="text">
      <string>Инструкция</string>
@@ -2462,23 +3261,24 @@
    <widget class="QPushButton" name="btn_converter_2">
     <property name="geometry">
      <rect>
-      <x>30</x>
+      <x>20</x>
       <y>290</y>
-      <width>131</width>
-      <height>41</height>
+      <width>150</width>
+      <height>50</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Times New Roman</family>
-      <pointsize>15</pointsize>
+      <pointsize>12</pointsize>
      </font>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: white;</string>
+     <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
     </property>
     <property name="text">
-     <string>Конвертер 2.0</string>
+     <string>Конвертер единицы</string>
     </property>
    </widget>
   </widget>
