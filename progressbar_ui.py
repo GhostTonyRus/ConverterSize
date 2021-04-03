@@ -89,7 +89,7 @@ class Ui_LoardingScreen(object):
     def retranslateUi(self, LoardingScreen):
         _translate = QtCore.QCoreApplication.translate
         LoardingScreen.setWindowTitle(_translate("LoardingScreen", "MainWindow"))
-        self.lbl_title.setText(_translate("LoardingScreen", "Инженерный калькулятор"))
-        self.lbl_description.setText(_translate("LoardingScreen", "Калькулятор конвертер единиц"))
+        self.lbl_title.setText(_translate("LoardingScreen", "Инженерный переводчик"))
+        self.lbl_description.setText(_translate("LoardingScreen", "Конвертер единиц и калькулятор"))
         self.lbl_version.setText(_translate("LoardingScreen", "v.2.1.0"))
         self.lbl_description_2.setText(_translate("LoardingScreen", "Загрузка..."))

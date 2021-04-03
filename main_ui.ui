@@ -49,7 +49,7 @@
      <rect>
       <x>10</x>
       <y>10</y>
-      <width>181</width>
+      <width>182</width>
       <height>881</height>
      </rect>
     </property>
@@ -58,8 +58,8 @@
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>59</y>
-      <width>150</width>
+      <y>50</y>
+      <width>164</width>
       <height>50</height>
      </rect>
     </property>
@@ -81,8 +81,8 @@ color: #ffd369;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>210</y>
-      <width>150</width>
+      <y>290</y>
+      <width>164</width>
       <height>50</height>
      </rect>
     </property>
@@ -105,14 +105,14 @@ color: #ffd369;</string>
      <rect>
       <x>20</x>
       <y>132</y>
-      <width>150</width>
+      <width>164</width>
       <height>50</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Times New Roman</family>
-      <pointsize>10</pointsize>
+      <pointsize>13</pointsize>
      </font>
     </property>
     <property name="styleSheet">
@@ -180,7 +180,7 @@ color: #ffd369;</string>
         <x>180</x>
         <y>350</y>
         <width>831</width>
-        <height>151</height>
+        <height>191</height>
        </rect>
       </property>
       <property name="font">
@@ -194,8 +194,7 @@ color: #ffd369;</string>
 color: #ffd369;</string>
       </property>
       <property name="text">
-       <string>Программа выполняет четыре функции: конвертирует из одной единицы в другую, конвертирует давление, выполняет простой счёт в калькуляторе, конверирует единицу. Поля ввода ьвыделены белой рамкой. Для перевода необходимо нажать кнопку перевод.
-</string>
+       <string>Программа выполняет четыре функции: конвертирует из одной единицы в другую, конвертирует давление, выполняет простой счёт в калькуляторе, конверирует единицу. Поля ввода выделены белой рамкой. Для перевода необходимо нажать кнопку перевод. Для нового расчёта в калькулятора надо нажать C, чтобы удлить предыдущий результат.</string>
       </property>
       <property name="alignment">
        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -801,7 +800,7 @@ color: #ffd369;</string>
       <property name="geometry">
        <rect>
         <x>270</x>
-        <y>640</y>
+        <y>630</y>
         <width>50</width>
         <height>40</height>
        </rect>
@@ -2757,7 +2756,7 @@ QLineEdit:focus {
      <widget class="QLabel" name="lbl_header_calculator">
       <property name="geometry">
        <rect>
-        <x>430</x>
+        <x>110</x>
         <y>100</y>
         <width>261</width>
         <height>71</height>
@@ -2786,7 +2785,7 @@ color: #ffd369;</string>
         <x>80</x>
         <y>240</y>
         <width>331</width>
-        <height>561</height>
+        <height>551</height>
        </rect>
       </property>
       <property name="frameShape">
@@ -2795,7 +2794,7 @@ color: #ffd369;</string>
       <property name="frameShadow">
        <enum>QFrame::Raised</enum>
       </property>
-      <widget class="QPushButton" name="pushButton">
+      <widget class="QPushButton" name="btn_7">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2818,7 +2817,7 @@ color: #ffd369;</string>
         <string>7</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label">
+      <widget class="QLabel" name="lbl_calc_rez">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2833,6 +2832,9 @@ color: #ffd369;</string>
          <pointsize>40</pointsize>
         </font>
        </property>
+       <property name="layoutDirection">
+        <enum>Qt::LeftToRight</enum>
+       </property>
        <property name="styleSheet">
         <string notr="true">background-color: #393e46;
 color: #ffd369;</string>
@@ -2840,8 +2842,11 @@ color: #ffd369;</string>
        <property name="text">
         <string/>
        </property>
+       <property name="alignment">
+        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+       </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="btn_8">
        <property name="geometry">
         <rect>
          <x>90</x>
@@ -2864,7 +2869,7 @@ color: #ffd369;</string>
         <string>8</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_3">
+      <widget class="QPushButton" name="btn_9">
        <property name="geometry">
         <rect>
          <x>170</x>
@@ -2887,7 +2892,7 @@ color: #ffd369;</string>
         <string>9</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_4">
+      <widget class="QPushButton" name="btn_plus">
        <property name="geometry">
         <rect>
          <x>250</x>
@@ -2910,7 +2915,7 @@ color: #ffd369;</string>
         <string>+</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_5">
+      <widget class="QPushButton" name="btn_4">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -2933,7 +2938,7 @@ color: #ffd369;</string>
         <string>4</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_6">
+      <widget class="QPushButton" name="btn_5">
        <property name="geometry">
         <rect>
          <x>90</x>
@@ -2956,7 +2961,7 @@ color: #ffd369;</string>
         <string>5</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_7">
+      <widget class="QPushButton" name="btn_6">
        <property name="geometry">
         <rect>
          <x>170</x>
@@ -2979,7 +2984,7 @@ color: #ffd369;</string>
         <string>6</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_8">
+      <widget class="QPushButton" name="btn_minus">
        <property name="geometry">
         <rect>
          <x>250</x>
@@ -3002,7 +3007,7 @@ color: #ffd369;</string>
         <string>-</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_9">
+      <widget class="QPushButton" name="btn_1">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3025,7 +3030,7 @@ color: #ffd369;</string>
         <string>1</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_10">
+      <widget class="QPushButton" name="btn_2">
        <property name="geometry">
         <rect>
          <x>90</x>
@@ -3048,7 +3053,7 @@ color: #ffd369;</string>
         <string>2</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_11">
+      <widget class="QPushButton" name="btn_3">
        <property name="geometry">
         <rect>
          <x>170</x>
@@ -3071,7 +3076,7 @@ color: #ffd369;</string>
         <string>3</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_12">
+      <widget class="QPushButton" name="btn_divide">
        <property name="geometry">
         <rect>
          <x>250</x>
@@ -3094,7 +3099,7 @@ color: #ffd369;</string>
         <string>/</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_13">
+      <widget class="QPushButton" name="btn_del">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3117,7 +3122,7 @@ color: #ffd369;</string>
         <string>C</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_14">
+      <widget class="QPushButton" name="btn_0">
        <property name="geometry">
         <rect>
          <x>90</x>
@@ -3140,7 +3145,7 @@ color: #ffd369;</string>
         <string>0</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_15">
+      <widget class="QPushButton" name="btn_dot">
        <property name="geometry">
         <rect>
          <x>170</x>
@@ -3163,7 +3168,7 @@ color: #ffd369;</string>
         <string>.</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_16">
+      <widget class="QPushButton" name="btn_multiply">
        <property name="geometry">
         <rect>
          <x>250</x>
@@ -3186,7 +3191,7 @@ color: #ffd369;</string>
         <string>*</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_17">
+      <widget class="QPushButton" name="btn_exponentiation">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -3209,7 +3214,7 @@ color: #ffd369;</string>
         <string>**</string>
        </property>
       </widget>
-      <widget class="QPushButton" name="pushButton_18">
+      <widget class="QPushButton" name="btn_equally">
        <property name="geometry">
         <rect>
          <x>170</x>
@@ -3233,6 +3238,61 @@ color: #ffd369;</string>
        </property>
       </widget>
      </widget>
+     <widget class="QLabel" name="lbl_header_action_history">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>100</y>
+        <width>261</width>
+        <height>71</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="text">
+       <string>История действий</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPlainTextEdit" name="pte_history">
+      <property name="geometry">
+       <rect>
+        <x>700</x>
+        <y>260</y>
+        <width>261</width>
+        <height>511</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Times New Roman</family>
+        <pointsize>30</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: #393e46;
+color: #ffd369;</string>
+      </property>
+      <property name="lineWrapMode">
+       <enum>QPlainTextEdit::WidgetWidth</enum>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+     </widget>
     </widget>
    </widget>
    <widget class="QPushButton" name="btn_instruction">
@@ -3240,7 +3300,7 @@ color: #ffd369;</string>
      <rect>
       <x>20</x>
       <y>800</y>
-      <width>150</width>
+      <width>164</width>
       <height>50</height>
      </rect>
     </property>
@@ -3262,8 +3322,8 @@ color: #ffd369;</string>
     <property name="geometry">
      <rect>
       <x>20</x>
-      <y>290</y>
-      <width>150</width>
+      <y>210</y>
+      <width>164</width>
       <height>50</height>
      </rect>
     </property>

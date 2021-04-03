@@ -1,10 +1,16 @@
 import sys
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtCore import QTimer
+from PyQt5.QtGui import QColor
+
 from logic import Calculator
 from main_ui import Ui_MainWindow
 from progressbar_ui import Ui_LoardingScreen
 import time
+import ctypes
+
+myappid = 'myconverter.version.2.1.0'
+ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
 
 
 class LoardingScreen(QtWidgets.QMainWindow):
@@ -15,18 +21,19 @@ class LoardingScreen(QtWidgets.QMainWindow):
         self.ui.setupUi(self)
 
         # автоматический запуск программы
-        QtCore.QTimer.singleShot(1500, lambda: self.doAction())
+        QtCore.QTimer.singleShot(500, lambda: self.doAction())
 
-        # УДАЛЯЕМ РАМКИ
+        # настройка рамки окна
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_AttributeCount)
+        self.setWindowIcon(QtGui.QIcon("window_icon.png"))
 
     def doAction(self):
         for i in range(101):
             time.sleep(0.05)
             self.ui.progressBar.setProperty("value", i)
             if i == 100:
-                time.sleep(2)
+                time.sleep(1)
                 self.main_window = MyWindow()
                 self.main_window.show()
                 self.close()
@@ -38,7 +45,13 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
-        # прказ окна инструкции по умолчанию
+        # настройка рамки окна
+        # self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        # self.setAttribute(QtCore.Qt.WA_AttributeCount)
+        self.setWindowIcon(QtGui.QIcon("window_icon.png"))
+        self.setWindowTitle("Инженерный переводчик")
+
+        # показ окна инструкции по умолчанию
         self.ui.stackedWidget.setCurrentWidget(self.ui.instruction)
 
         # настройка кнопок
@@ -102,6 +115,26 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         self.ui.btn_conversion_4.clicked.connect(lambda: self.conversionTime(number=self.ui.le_units_of_time_3.text(),
                                                                              value_1=self.ui.cb_units_of_time_3.currentText(),
                                                                              value_2=self.ui.cb_units_of_time_4.currentText()))
+
+        # настройка кнопок калькулятора
+        self.ui.btn_0.clicked.connect(lambda: self.getValues(value=0))
+        self.ui.btn_1.clicked.connect(lambda: self.getValues(value=1))
+        self.ui.btn_2.clicked.connect(lambda: self.getValues(value=2))
+        self.ui.btn_3.clicked.connect(lambda: self.getValues(value=3))
+        self.ui.btn_4.clicked.connect(lambda: self.getValues(value=4))
+        self.ui.btn_5.clicked.connect(lambda: self.getValues(value=5))
+        self.ui.btn_6.clicked.connect(lambda: self.getValues(value=6))
+        self.ui.btn_7.clicked.connect(lambda: self.getValues(value=7))
+        self.ui.btn_8.clicked.connect(lambda: self.getValues(value=8))
+        self.ui.btn_9.clicked.connect(lambda: self.getValues(value=9))
+        self.ui.btn_dot.clicked.connect(lambda: self.getValues(value="."))
+        self.ui.btn_plus.clicked.connect(lambda: self.getValues(value="+"))
+        self.ui.btn_minus.clicked.connect(lambda: self.getValues(value="-"))
+        self.ui.btn_divide.clicked.connect(lambda: self.getValues(value="/"))
+        self.ui.btn_multiply.clicked.connect(lambda: self.getValues(value="*"))
+        self.ui.btn_exponentiation.clicked.connect(lambda: self.getValues(value="**"))
+        self.ui.btn_equally.clicked.connect(lambda: self.insertRez())
+        self.ui.btn_del.clicked.connect(lambda: self.ui.lbl_calc_rez.clear())  # очистка поля ввода
 
     # настройка показа окон
     # страница конвертера единиц

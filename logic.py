@@ -1,6 +1,8 @@
 from PyQt5 import QtWidgets, QtGui, QtCore
-from PyQt5.QtWidgets import QMessageBox
+from PyQt5.QtWidgets import QMessageBox, QButtonGroup, QApplication
 from main_ui import Ui_MainWindow
+import re
+import time
 
 
 class Calculator:
@@ -18,6 +20,12 @@ class Calculator:
         msg = QMessageBox()
         msg.setIcon(QMessageBox.Information)
         msg.setText("ПОЛЕ ВВОДА НЕ ДОЛЖНЫ БЫТЬ ПУСТЫМ!")
+        exit = msg.exec_()
+
+    def showCalcError(self):
+        msg = QMessageBox()
+        msg.setIcon(QMessageBox.Information)
+        msg.setText("Введите данные для расчёта!")
         exit = msg.exec_()
 
     # счёт длины
@@ -563,6 +571,16 @@ class Calculator:
             elif value_1 == "Тонна" and value_2 == "Центнер":
                 rez = num * 10
                 self.ui.lbl_rezult_conversion_3.setText(str(rez))
+            elif value_1 == "Тонна" and value_2 == "Грамм":
+                rez = num * 1000000
+                self.ui.lbl_rezult_conversion_3.setText(str(rez))
+            elif value_1 == "Килограмм" and value_2 == "Тонна":
+                rez = num * 0.001
+                self.ui.lbl_rezult_conversion_3.setText(str(rez))
+            elif value_1 == "Грамм" and value_2 == "Тонна":
+                rez = num * 1000000
+                self.ui.lbl_rezult_conversion_3.setText(str(rez))
+
 
     # перевод единиц времени
     def conversionTime(self, number, value_1, value_2):
@@ -589,3 +607,39 @@ class Calculator:
             elif value_1 == "Век" and value_2 == "Лет":
                 rez = num * 100
                 self.ui.lbl_rezult_conversion_4.setText(str(rez))
+
+    # функции калькулятора
+    def getValues(self, value):
+        # получаем числа
+        oldValue = self.ui.lbl_calc_rez.text()
+        # сохраняем результаты в переменную
+        rez = "%s%s" % (str(oldValue), str(value))
+        # вставляем число в лейбл
+        self.ui.lbl_calc_rez.setText(rez.strip())
+        # возвращаем эту запись
+        return rez
+
+    # вставляем результат счёта в текстовое поля
+    def insertRez(self):
+        # переменная, хранаящая результат функции
+        action = self.getValues("")
+        # блок проверки деления на ноль
+        try:
+            # счёт записи, возвращённой функцией
+            rez = str(eval(action))
+            result = re.search(r"/0", rez)
+            if result:
+                pass
+            elif not result:
+                # вставляем результат в лейбл
+                self.ui.lbl_calc_rez.setText(rez)
+                # история действий
+                # действия
+                actions = f"{action}={rez}"
+                # редыдущие действия
+                oldAction = self.ui.pte_history.toPlainText()
+                history = "%s%s\n" % (str(oldAction), str(actions))
+                # вставляем историю действия в текстовое поле
+                self.ui.pte_history.setPlainText(history)
+        except ZeroDivisionError:
+            self.ui.lbl_calc_rez.setText("∞")

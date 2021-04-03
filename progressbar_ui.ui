@@ -65,7 +65,7 @@
       <string notr="true">color: #ffd369;</string>
      </property>
      <property name="text">
-      <string>Инженерный калькулятор</string>
+      <string>Инженерный переводчик</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
@@ -90,7 +90,7 @@
       <string notr="true">color: rgb(98, 114, 164);</string>
      </property>
      <property name="text">
-      <string>Калькулятор конвертер единиц</string>
+      <string>Конвертер единиц и калькулятор</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignCenter</set>
