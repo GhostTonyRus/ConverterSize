@@ -1,6 +1,5 @@
 from PyQt5.QtWidgets import QMessageBox
 from main_ui import Ui_MainWindow
-import re
 import random
 import math
 
@@ -154,344 +153,188 @@ class Calculator:
     # функция получает значение из поля формы и вызывает фунцию в соответствии с выбранным значением
     def getPressure(self, value):
         if value == "Па":
-            self.countPa(self.ui.le_get_data.text())
+            self.count_pa(self.ui.le_get_data.text())
         elif value == "кПа":
-            self.countkPa(self.ui.le_get_data.text())
+            self.count_kPa(self.ui.le_get_data.text())
         elif value == "МПа":
-            self.countMPA(self.ui.le_get_data.text())
+            self.count_MPa(self.ui.le_get_data.text())
         elif value == "кГс/см2":
-            self.countkGs(self.ui.le_get_data.text())
+            self.count_kGs(self.ui.le_get_data.text())
         elif value == "физ.атм":
-            self.countfizatm(self.ui.le_get_data.text())
+            self.count_fizatm(self.ui.le_get_data.text())
         elif value == "мм.рт.ст":
-            self.countmmrtst(self.ui.le_get_data.text())
+            self.count_mmrtst(self.ui.le_get_data.text())
         elif value == "мм.вод.ст":
-            self.countmmvodst(self.ui.le_get_data.text())
+            self.count_mmvodst(self.ui.le_get_data.text())
         elif value == "bar":
-            self.countbar(self.ui.le_get_data.text())
+            self.count_bar(self.ui.le_get_data.text())
         elif value == "psi":
-            self.countpsi(self.ui.le_get_data.text())
+            self.count_psi(self.ui.le_get_data.text())
 
-    # счёт па
-    def countPa(self, value):
-        # проверка поля ввода
+    # счёт Па
+    def count_pa(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # па
-            rez_pa = num
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 0.001
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.000001
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/СМ2
-            rez_kGs = num * 0.0000102
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.атм
-            rez_fiz = num * 0.00000987
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 0.0075006
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст.
-            rez_mm_vod_st = num * 0.101972
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 0.00001
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 0.00014504
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 1, self.ui.lbl_rez_kPa: 0.001, self.ui.lbl_rez_MPa: 0.000001,
+            self.ui.lbl_rez_kGs_sm2: 0.0000102, self.ui.lbl_rez_fiz_atm: 0.00000987, self.ui.lbl_rez_mm_rt_st: 0.0075006,
+            self.ui.lbl_rez_mm_vod_st: 0.101972, self.ui.lbl_rez_bar: 0.00001, self.ui.lbl_rez_psi: 0.00014504,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
-    def countkPa(self, value):
+    # счёт кПа
+    def count_kPa(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 1000
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.001
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num * 0.0101972
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.фтм.
-            rez_fiz = num * 0.00986923
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 7.50062
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст
-            rez_mm_vod_st = num * 101.9716
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 0.01
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 0.1450377
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 1000, self.ui.lbl_rez_kPa: 1, self.ui.lbl_rez_MPa: 0.001,
+            self.ui.lbl_rez_kGs_sm2: 0.0101972, self.ui.lbl_rez_fiz_atm: 0.00986923,
+            self.ui.lbl_rez_mm_rt_st: 7.50062, self.ui.lbl_rez_mm_vod_st: 101.9716,
+            self.ui.lbl_rez_bar: 0.01, self.ui.lbl_rez_psi: 0.1450377,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
-    def countMPA(self, value):
+    # счёт МПа
+    def count_MPa(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 10000000
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 1000
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num * 10.19716
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.фтм.
-            rez_fiz = num * 9.86923
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 7500.62
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст
-            rez_mm_vod_st = num * 101971.6
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 10
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 145.0377
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 10000000, self.ui.lbl_rez_kPa: 1000, self.ui.lbl_rez_MPa: 1,
+            self.ui.lbl_rez_kGs_sm2: 10.19716, self.ui.lbl_rez_fiz_atm: 9.86923,
+            self.ui.lbl_rez_mm_rt_st: 7500.62, self.ui.lbl_rez_mm_vod_st: 101971.6,
+            self.ui.lbl_rez_bar: 10, self.ui.lbl_rez_psi: 145.0377,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
-    # чёт кГс/см2
-    def countkGs(self, value):
+    # счёт кГс/см2
+    def count_kGs(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 98066.5
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 98.0665
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.0980665
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.атм
-            rez_fiz = num * 0.967841
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 735.559
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст.
-            rez_mm_vod_st = num * 100000
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 0.980665
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 14.223344
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 98066.5, self.ui.lbl_rez_kPa: 98.0665, self.ui.lbl_rez_MPa: 0.0980665,
+            self.ui.lbl_rez_kGs_sm2: 1, self.ui.lbl_rez_fiz_atm: 0.967841,
+            self.ui.lbl_rez_mm_rt_st: 735.559, self.ui.lbl_rez_mm_vod_st: 100000,
+            self.ui.lbl_rez_bar: 0.980665, self.ui.lbl_rez_psi: 14.223344,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
-    # счёт физ.атм.
-    def countfizatm(self, value):
+    # счёт физ.атм
+    def count_fizatm(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 101325
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 101.325
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.101325
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num * 1.033227
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.атм
-            rez_fiz = num
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 760
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст.
-            rez_mm_vod_st = num * 10332.27
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 1.01325
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 14.6959
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 101325, self.ui.lbl_rez_kPa: 101.325, self.ui.lbl_rez_MPa: 0.101325,
+            self.ui.lbl_rez_kGs_sm2: 1.033227, self.ui.lbl_rez_fiz_atm: 1,
+            self.ui.lbl_rez_mm_rt_st: 760, self.ui.lbl_rez_mm_vod_st: 10332.27,
+            self.ui.lbl_rez_bar: 1.01325, self.ui.lbl_rez_psi: 14.6959,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
-    def countmmrtst(self, value):
+    # счёт мм.рт.ст
+    def count_mmrtst(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 133.3224
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 0.1333224
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.00011333
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num * 0.0013595
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.атм
-            rez_fiz = num * 0.00131579
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст.
-            rez_mm_vod_st = num * 13.6
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 0.00133322
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 0.019336
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 133.3224, self.ui.lbl_rez_kPa: 0.1333224, self.ui.lbl_rez_MPa: 0.00011333,
+            self.ui.lbl_rez_kGs_sm2: 0.0013595, self.ui.lbl_rez_fiz_atm: 0.00131579,
+            self.ui.lbl_rez_mm_rt_st: 1, self.ui.lbl_rez_mm_vod_st: 13.6,
+            self.ui.lbl_rez_bar: 0.00133322, self.ui.lbl_rez_psi: 0.019336,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
     # счёт мм.вод.ст.
-    def countmmvodst(self, value):
+    def count_mmvodst(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 9.80665
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 0.00980665
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.00000981
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num * 0.0001
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.атм
-            rez_fiz = num * 0.00009678
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 0.073556
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст.
-            rez_mm_vod_st = num
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 0.00009807
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 0.00142233
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 9.80665, self.ui.lbl_rez_kPa: 0.00980665, self.ui.lbl_rez_MPa: 0.00000981,
+            self.ui.lbl_rez_kGs_sm2: 0.0001, self.ui.lbl_rez_fiz_atm: 0.00009678,
+            self.ui.lbl_rez_mm_rt_st: 0.073556, self.ui.lbl_rez_mm_vod_st: 1,
+            self.ui.lbl_rez_bar: 0.00009807, self.ui.lbl_rez_psi: 0.00142233,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
     # счёт bar
-    def countbar(self, value):
+    def count_bar(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 100000
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 100
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.1
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num * 1.019716
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.атм
-            rez_fiz = num * 0.986923
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 750.062
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст.
-            rez_mm_vod_st = num * 10197.16
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num * 14.50377
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 100000, self.ui.lbl_rez_kPa: 100, self.ui.lbl_rez_MPa: 0.1,
+            self.ui.lbl_rez_kGs_sm2: 1.019716, self.ui.lbl_rez_fiz_atm: 0.986923,
+            self.ui.lbl_rez_mm_rt_st: 750.062, self.ui.lbl_rez_mm_vod_st: 10197.16,
+            self.ui.lbl_rez_bar: 1, self.ui.lbl_rez_psi: 14.50377,
+        }
+        for k, v in values.items():
+            res = num * v
+            k.setText(str(round(res, 2)))
 
-    def countpsi(self, value):
+    # счёт psi
+    def count_psi(self, value):
         if value == "":
             self.showEmptyError()
         elif value.isalpha():
             self.showStrError()
-        else:
-            num = float(value)
-            # Па
-            rez_pa = num * 6894.757
-            self.ui.lbl_rez_1.setText(str(round(rez_pa, 2)))
-            # кПа
-            rez_kPa = num * 6.894757
-            self.ui.lbl_rez_2.setText(str(round(rez_kPa, 2)))
-            # МПа
-            rez_MPa = num * 0.006894756
-            self.ui.lbl_rez_3.setText(str(round(rez_MPa, 2)))
-            # кГс/см2
-            rez_kGs = num * 0.070307
-            self.ui.lbl_rez_4.setText(str(round(rez_kGs, 2)))
-            # физ.атм
-            rez_fiz = num * 0.068046
-            self.ui.lbl_rez_5.setText(str(round(rez_fiz, 2)))
-            # мм.рт.ст.
-            rez_mm_rt_st = num * 51.715217
-            self.ui.lbl_rez_6.setText(str(round(rez_mm_rt_st, 2)))
-            # мм.вод.ст.
-            rez_mm_vod_st = num * 703.07
-            self.ui.lbl_rez_7.setText(str(round(rez_mm_vod_st, 2)))
-            # bar
-            rez_bar = num * 0.0689476
-            self.ui.lbl_rez_8.setText(str(round(rez_bar, 2)))
-            # psi
-            rez_psi = num
-            self.ui.lbl_rez_9.setText(str(round(rez_psi, 2)))
+        num = float(value)
+        values = {
+            self.ui.lbl_rez_Pa: 6894.757, self.ui.lbl_rez_kPa: 6.894757, self.ui.lbl_rez_MPa: 0.006894756,
+            self.ui.lbl_rez_kGs_sm2: 0.070307, self.ui.lbl_rez_fiz_atm: 0.068046,
+            self.ui.lbl_rez_mm_rt_st: 51.715217, self.ui.lbl_rez_mm_vod_st: 703.07,
+            self.ui.lbl_rez_bar: 0.0689476, self.ui.lbl_rez_psi: 1,
+        }
+        for key, v in values.items():
+            res = num * v
+            key.setText(str(round(res, 2)))
+
+    def conversation_length(self, *args, number):
+        if number == "":
+            self.showEmptyError()
+        elif number.isalpha():
+            self.showStrError()
+        num = float(number)
+        values = {"Сантиметр": 10, "Миллиметр": 1}
+        # values = {"Сантиметр": 1}
+        for k, v in values.items():
+            for i in args:
+                if k == i and k == i:
+                    print(k)
 
     # перевод единиц длины
     def conversionLength(self, number, value_1, value_2):
@@ -815,3 +658,4 @@ class Calculator:
                 self.ui.pte_history.setPlainText(history)
                 # вставляем результат в лейбл
                 self.ui.lbl_calc_rez.setText(value)
+

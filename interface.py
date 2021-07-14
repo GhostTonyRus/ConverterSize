@@ -1,14 +1,14 @@
 import sys
 from PyQt5 import QtWidgets, QtGui, QtCore
 from PyQt5.QtWidgets import QMessageBox, QDesktopWidget
-from PyQt5.QtCore import  QPoint
+from PyQt5.QtCore import QPoint
 from PyQt5.QtGui import QPixmap
-
 from logic import Calculator
 from main_ui import Ui_MainWindow
 from progressbar_ui import Ui_LoardingScreen
 from exit_window_ui import Ui_Exit_window_ui
 import time
+from make_saves import Save
 
 # myappid = 'myconverter.version.2.1.0'
 # ctypes.windll.shell32.SetCurrentProcessExplicitAppUserModelID(myappid)
@@ -74,7 +74,8 @@ class LoardingScreen(QtWidgets.QMainWindow):
     # проверка пароля
     def checkPassord(self):
         text = self.ui.le_password_input.text()
-        if text == "чёрт":
+        # if text == "чёрт":
+        if text == "":
             self.ui.stackedWidget.setCurrentWidget(self.ui.loarding_page)
             self.doAction()
         else:
@@ -151,6 +152,9 @@ class ExitWindow(QtWidgets.QMainWindow):
 
 # основное окно программы
 class MyWindow(QtWidgets.QMainWindow, Calculator):
+    # класс сохранения настроек
+    save = Save()
+
     def __init__(self):
         super().__init__()
         self.ui = Ui_MainWindow()
@@ -176,6 +180,8 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         self.ui.btn_instruction.clicked.connect(self.showInstruction)
         # показ конвертер 2
         self.ui.btn_converter_2.clicked.connect(self.showConverter)
+        # пока настроек
+        self.ui.btn_settings.clicked.connect(self.showSettings)
 
         # счёт единиц длины
         self.ui.btn_count.clicked.connect(
@@ -211,10 +217,15 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         self.ui.le_get_data.returnPressed.connect(self.ui.btn_count_5.click)  # нажатие <Enter>
 
         # перевод единиц длины
+        # self.ui.btn_conversion_1.clicked.connect(
+        #     lambda: self.conversation_length(number=self.ui.le_units_of_length_3.text(),
+        #                                   value_1=self.ui.cb_units_of_length_3.currentText(),
+        #                                   value_2=self.ui.cb_units_of_length_4.currentText()))
         self.ui.btn_conversion_1.clicked.connect(
-            lambda: self.conversionLength(number=self.ui.le_units_of_length_3.text(),
-                                          value_1=self.ui.cb_units_of_length_3.currentText(),
-                                          value_2=self.ui.cb_units_of_length_4.currentText()))
+            lambda: self.conversation_length(
+                                          self.ui.cb_units_of_length_3.currentText(),
+                                          self.ui.cb_units_of_length_4.currentText(),
+                                          number=self.ui.le_units_of_length_3.text(),))
         self.ui.btn_conversion_1.setAutoDefault(True)  # нажатие <Enter>
         self.ui.le_units_of_length_3.returnPressed.connect(self.ui.btn_conversion_1.click)  # нажатие <Enter>
 
@@ -283,6 +294,43 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         self.ui.btn_tg.clicked.connect(lambda: self.count_tg()) # счёт tg
         self.ui.btn_ctg.clicked.connect(lambda: self.count_ctg()) # счёт ctg
 
+        # задние фоны
+        bg = [self.ui.stackedWidget, self.ui.centralwidget, self.ui.instruction, self.ui.settings_page,
+              self.ui.unit_converter_page, self.ui.unit_converter_page_2, self.ui.ratio_converter_page]
+
+        # фон цвета
+        font_color = [
+            self.ui.lbl_header, self.ui.lbl_text,
+            self.ui.lbl_header_ratio, self.ui.lbl_bar, self.ui.lbl_fiz, self.ui.lbl_kgs, self.ui.lbl_kpa,
+            self.ui.lbl_mmrtst, self.ui.lbl_mmvodst, self.ui.lbl_mpa, self.ui.lbl_pa, self.ui.lbl_psi,
+            self.ui.lbl_rez_Pa, self.ui.lbl_rez_kPa, self.ui.lbl_rez_MPa, self.ui.lbl_rez_kGs_sm2, self.ui.lbl_rez_fiz_atm,
+            self.ui.lbl_rez_mm_rt_st, self.ui.lbl_rez_mm_vod_st, self.ui.lbl_rez_bar, self.ui.lbl_rez_psi,
+            self.ui.lbl_header_unit_2, self.ui.lbl_header_square_2, self.ui.lbl_header_mass_2,
+            self.ui.lbl_header_time_2, self.ui.lbl_rezult_conversion, self.ui.lbl_rezult_conversion_2,
+            self.ui.lbl_rezult_conversion_3, self.ui.lbl_rezult_conversion_4, self.ui.lbl_rezult_conversion_5,
+            self.ui.lbl_rezult_conversion_6, self.ui.lbl_rezult_conversion_7, self.ui.lbl_rezult_conversion_8,
+            self.ui.lbl_header_calculator, self.ui.lbl_header_action_history, self.ui.lbl_calc_rez,
+            self.ui.label, self.ui.label_2, self.ui.label_3, self.ui.label_4,
+        ]
+
+
+        # меняем цвет заднего фона
+        self.ui.btn_choose_color_bg.clicked.connect(lambda: self.save.get_color_from_cb(bg, cb_colors=self.ui.cb_bg_colors))
+        # меняем цвет текста
+        self.ui.btn_choose_color_text.clicked.connect(lambda: self.save.get_color_from_cb(font_color, cb_colors=self.ui.cb_text_colors))
+        # сохраняем цвет в json файл
+        self.ui.btn_save_settings.clicked.connect(lambda: self.save.save_the_selected_txt_color())
+        # загрузка настроек
+        self.save.load_settings(bg)
+        # self.save.load_settings(font_color)
+
+
+    # def change_color_text(self, *args):
+    #     for items in args:
+    #         for text in items:
+    #             # text.setStyleSheet("background-color: #393e46; color: red;")
+    #             text.setStyleSheet("color: red;")
+
     # настройка показа окон
     # страница конвертера единиц
     def showUnitPage(self):
@@ -304,13 +352,14 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
     def showConverter(self):
         self.ui.stackedWidget.setCurrentWidget(self.ui.unit_converter_page_2)
 
+    # страница настроек
+    def showSettings(self):
+        self.ui.stackedWidget.setCurrentWidget(self.ui.settings_page)
+
     # окно с подтверждение выхода
     def exit(self):
         window = ExitWindow()
         window.show()
-
-
-
 
     # перетаскивание окна
     def center(self):
@@ -326,3 +375,4 @@ class MyWindow(QtWidgets.QMainWindow, Calculator):
         delta = QPoint (event.globalPos() - self.oldPos)
         self.move(self.x() + delta.x(), self.y() + delta.y())
         self.oldPos = event.globalPos()
+
